@@ -84,5 +84,42 @@
 
 ---
 
+## Связи между таблицами
+
+### Схема связей базы данных
+
+### Детализация связей по ключам
+
+**customers ↔ orders**
+- `customers.customer_id` = `orders.customer_id`
+- Один клиент может совершать несколько заказов (отношение 1:n)
+
+**orders ↔ order_items**
+- `orders.order_id` = `order_items.order_id`
+- Один заказ может содержать несколько товарных позиций (отношение 1:n)
+
+**order_items ↔ products**
+- `order_items.product_id` = `products.product_id`
+- Один товар может присутствовать в нескольких позициях заказов (отношение 1:n)
+
+**customers ↔ customer_actions**
+- `customers.customer_id` = `customer_actions.customer_id`
+- Один клиент может совершать множество действий (отношение 1:n)
+
+**customer_actions ↔ products**
+- `customer_actions.product_id` = `products.product_id`
+- Один товар может быть просмотрен/добавлен в корзину разными пользователями (отношение 1:n)
+
+**customer_actions ↔ orders**
+- `customer_actions.order_id` = `orders.order_id`
+- Один заказ связан с действиями покупки пользователя (отношение 1:n)
+
+### Ключевые поля связей
+
+- **customer_id** - связывает customers, orders, customer_actions
+- **order_id** - связывает orders, order_items, customer_actions  
+- **product_id** - связывает products, order_items, customer_actions
+---
+
 Тестовую базу данных можно [скачать](https://github.com/lprosh/junior-analyst-portfolio/blob/main/sql/mts/prd_sbx_general.db)
 или [создать с помощью запроса](https://github.com/lprosh/junior-analyst-portfolio/blob/main/sql/mts/prd_sbx_general.sql).
