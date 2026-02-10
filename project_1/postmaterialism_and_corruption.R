@@ -8,6 +8,7 @@ library(pwr)
 wvs <- read_csv("wvs.csv")
 
 #Предобработка данных
+
 #отбор нужных колонок
 wvs_d <- wvs %>% 
   select(Q181, Q152, Q153, Q154, Q155, Q156, Q157)
@@ -29,6 +30,7 @@ wvs_d <- wvs_d %>%
   select(-(2:7))
 
 #Описательные статитсики
+
 #минимум, максимум, среднее, медиана
 summary(wvs_d$Corruption)
 summary(wvs_d$Index_PM)
@@ -49,6 +51,7 @@ kurtosis(wvs_d$Corruption)
 kurtosis(wvs_d$Index_PM)
 
 #Описательные визуализации
+
 wvs_d %>% 
   ggplot(aes(x = Corruption)) +
   geom_bar(fill = "skyblue") +
