@@ -1,4 +1,4 @@
-# Портфолио Data Analyst
+# Data Analyst
 
 ## Навыки
 
@@ -6,9 +6,6 @@
 - **SQL** (PostgreSQL, ClichHouse, MySQL) - написание сложных запросов, оконные функции, оптимизация
 - **Python** (Pandas, NumPy, Matplotlib, Seaborn, Plotly) для анализа и визуализации данных
 - **R** (tidyverse, dplyr, ggplot2, lavaan, semTools, semPlot) для продвинутого статистического анализа
-
-**Инструменты визуализации данных:**
-- **Tableau** / **Redash** 
 
 **Прочее:**
 - Работа с GitHub
