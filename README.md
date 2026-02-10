@@ -1,4 +1,4 @@
-# Портфолио Junior Data Analyst
+# Портфолио Data Analyst
 
 ## Навыки
 
