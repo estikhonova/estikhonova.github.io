@@ -209,25 +209,3 @@ eta_squared(Anova(model2.final), alternative = 'two.sided')
 # Коэффициенты модели
 plot_model(model2.final) + 
   geom_hline(aes(yintercept = 0), color = 'green', linetype = 'dashed')
-
-# ==================================================
-# 5. ИТОГОВЫЕ РЕЗУЛЬТАТЫ
-# ==================================================
-
-cat("\n", "=" * 50, "\n")
-cat("   РЕЗУЛЬТАТЫ АНАЛИЗА\n")
-cat("=" * 50, "\n\n")
-
-cat("ГИПОТЕЗА 1: Стимуляция ~ H + E\n")
-cat("----------------------------------------\n")
-cat("R² =", round(summary(model1.final)$r.squared, 3), "\n")
-cat("H: β =", round(coef(model1.final)[2], 3), ", p < 0.001\n")
-cat("E: β =", round(coef(model1.final)[3], 3), ", p < 0.001\n\n")
-
-cat("ГИПОТЕЗА 2: Гедонизм ~ H + X + O\n")
-cat("----------------------------------------\n")
-cat("R² =", round(summary(model2.final)$r.squared, 3), "\n")
-cat("H: β =", round(coef(model2.final)[2], 3), ", p < 0.001\n")
-cat("X: β =", round(coef(model2.final)[3], 3), ", p < 0.001\n")
-cat("O: β =", round(coef(model2.final)[4], 3), ", p < 0.001\n")
-cat("=" * 50, "\n")
